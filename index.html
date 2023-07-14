@@ -18,7 +18,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(45deg, #FF69B4, #FFD700);
+      background-color: #FFD700;
     }
     
     header {
@@ -34,7 +34,7 @@
     }
     
     #logo-section {
-      background: linear-gradient(45deg, #FF69B4, #FFD700);
+      background-color: #FFD700;
     }
     
     #how-to-buy-section {
@@ -141,6 +141,14 @@
     @media (max-width: 480px) {
       .btn {
         margin-top: 10px;
+      }
+    }
+
+    /* Fix for mobile devices */
+    @media (max-width: 480px) {
+      #contract p {
+        font-size: 18px;
+        line-height: 1.2;
       }
     }
   </style>
