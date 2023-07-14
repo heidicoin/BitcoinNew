@@ -102,6 +102,7 @@
       max-width: 100%;
       height: auto;
       border-radius: 50%;
+      cursor: pointer;
     }
     
     ol {
@@ -173,17 +174,17 @@
 <section id="logo-section">
   <div class="container">
 
-    <img src="BTCN.png" alt="Bitcoin New Logo">
+    <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x1852d530aa2134831d6a73530aa607123f5c8857"><img src="BTCN.png" alt="Bitcoin New Logo"></a>
   </div>
 </section>
 
 <!-- Contract Section -->
 <section id="contract">
-  <div class="container">
-       <h2 style="color: black;">Contract Address:</h2>
-    <p>0x6709ba57750e90efbf60b97963809971a8a69204</p>
-  </div>
-</section>
+    <div class="container">
+      <h2 style="color: black;">Contract Address:</h2>
+      <p>0x6709ba57750e90efbf60b97963809971a8a69204 <i class="far fa-copy" onclick="copyContractAddress()"></i></p>
+    </div>
+  </section>
 
 <!-- How to Buy Section -->
 <section id="how-to-buy-section">
@@ -221,6 +222,17 @@
     </a>
   </div>
 </footer>
-
+<script>
+    function copyContractAddress() {
+      const contractAddress = document.querySelector('#contract p').textContent;
+      navigator.clipboard.writeText(contractAddress)
+        .then(() => {
+          alert('Contract address copied to clipboard!');
+        })
+        .catch((error) => {
+          console.error('Failed to copy contract address:', error);
+        });
+    }
+  </script>
 </body>
 </html>
